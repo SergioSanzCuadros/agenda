@@ -8,5 +8,7 @@
         <h1>{{ $titulo ?? 'Agenda' }}</h1>
         <hr/>
         {{ $slot }}
+
+        <x-pie/>
     </body>
 </html>
