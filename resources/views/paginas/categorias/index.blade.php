@@ -11,7 +11,7 @@
 
     @foreach ($categorias as $categoria)
     <tr>
-        <td><a href='categorias/{{ $categoria->id }}'>{{ $categoria->nombre }}</a></td>
+        <td><a href='{{ route('categorias.show',$categoria) }}'>{{ $categoria->nombre }}</a></td>
         <td class='delete'>
             <form class='formulario' id='{{ $categoria->id }}' action='{{ route('categorias.destroy', $categoria) }}' method='post'>
                 @method('delete')
@@ -26,11 +26,11 @@
 
 <br>
 
-<a href='categorias/create'>Crear entrada</a>
+<a href='{{ route('categorias.create') }}'>Crear entrada</a>
 
 <br>
 <br>
 
-<a href='PersonasIndex.php'>Gestionar listado de Personas</a>
+<a href='{{ route('personas.index') }}'>Gestionar listado de Personas</a>
 
 </x-base>

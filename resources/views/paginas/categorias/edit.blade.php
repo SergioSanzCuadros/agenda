@@ -4,7 +4,11 @@
 
 <form method='post' action='{{ route('categorias.update', $categoria) }}'>
     @method('put')
-    <x-categorias_campos/>
+    <x-categorias_campos>
+        <x-slot:nombre_cat>
+            {{ $categoria->nombre }}
+        </x-slot:nombre_cat>
+    </x-categorias_campos>
     <input class='button' type='submit' name='crear' value='Editar categoría' />
 </form>
 
